@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index01</title>
+    <script crossorigin src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <style>
+        .klasa {
+            color: red;
+        }
+
+        .klasa1 {
+            color: blue;
+        }
+
+        .klasa2 {
+            color: violet;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="react-app"></div>
+    <script defer>
+        var square = React.createElement("div", {
+            style: {
+                width: "100px",
+                height: "100px",
+                display: 'flex',
+                backgroundColor: "red", // nie: background-color
+                color: "white",
+                fontSize: "20px",
+                margin: "2px",
+                textAlign: 'center'
+
+            }
+        },
+            "React element"
+        )
+        var row = React.createElement("div",
+            {
+                style: {
+                    border: '1px solid blue',
+                    display: 'flex',
+                    // flex-direction: 'row',
+                }
+            },
+            // elements
+            square,
+            square,
+            square
+        )
+        var container = React.createElement("div",
+            {
+                style: {
+                    border: '2px solid green',
+                    padding: '2px'
+
+                    // flex-direction: 'row',
+                }
+            },
+            // elements
+            row,
+            row,
+            row
+        )
+
+        var table = React.createElement("div",
+            {
+                style: {
+                    width: 'min-content',
+                    border: '2px solid orange',
+                    padding: '2px',
+                    display: 'flex',
+                    margin: 'auto auto'
+
+                    // flex-direction: 'row',
+                }
+            },
+            // elements
+            container,
+            container,
+            container
+        )
+
+
+        ReactDOM.render(
+            table,
+            document.getElementById('react-app')
+        )
+    </script>
+</body>
+
+</html>
